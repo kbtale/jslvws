@@ -1,5 +1,5 @@
 var navigationMenu = document.getElementById("P-Navigation");
-var container = document.getElementById("P-Container);
+var container = document.getElementById("P-Container");
 worksheetsList = document.getElementsByClassName("liveworksheet");
 selectedWorksheet = 0;
 toggleWorksheets(selectedWorksheet);
