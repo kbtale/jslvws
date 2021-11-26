@@ -6,7 +6,11 @@ toggleWorksheets(selectedWorksheet);
 
 for (var i = 0; i < worksheetsList.length; i++) { 
   menuEl = document.createElement("a");
-  menuEl.value = i
+  menuEl.value = i;
+  menuEl.style.width = menuEl.style.height = "30px";
+  menuEl.innerHTML = "";
+  menuEl.style.cursor = "pointer";
+  menuEl.style.bakground = "blue";
 }
 
 function toggleWorksheets(sw){
