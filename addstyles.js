@@ -16,6 +16,6 @@ for (var i = 0; i < worksheetsList.length; i++) {
 
 function toggleWorksheets(sw){
   for (var i = 1; i < worksheetsList.length; i++) { 
-    (i == sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
+    (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
 }
