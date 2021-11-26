@@ -11,6 +11,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.innerHTML = "";
   menuEl.style.cursor = "pointer";
   menuEl.style.bakground = "blue";
+  navigationMenu.insertAdjacentElement("beforeend",menuEl);
 }
 
 function toggleWorksheets(sw){
