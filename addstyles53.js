@@ -75,19 +75,23 @@ var classes = `
   width: 3.5em;
   heigth: 3.5em;
 }
+#P-Navigation-Menu .menuArrow-r {
+  margin-left: 6px;
+}
 
 #P-Navigation-Menu .menuArrow-l {
   justify-content: flex-end;
+  margin-right: 6px;
 }
 
 #P-Navigation-Menu .menuNumber:hover:not(.active), #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
   background-color: #2d59d6;
 }
 #P-Navigation-Menu .menuArrow-r:hover {
-  transform: translateX(10%) scale(1.1);
+  transform: translateX(60%) scale(1.1);
 }
 #P-Navigation-Menu .menuArrow-l:hover {
-  transform: translateX(-10%) scale(1.1);
+  transform: translateX(-60%) scale(1.1);
 }
 `;
 
