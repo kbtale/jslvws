@@ -48,10 +48,6 @@ rightArrow.innerHTML = "&#8680;";
   leftArrow.value = rightArrow.value = -1;
   leftArrow.addEventListener("click", function(ev){if (selectedWorksheet > 0) {selectedWorksheet -= 1; changeWorksheet(ev);}});
   rightArrow.addEventListener("click", function(ev){if (selectedWorksheet < worksheetsList.length-1) {selectedWorksheet += 1; changeWorksheet(ev);}});
-  leftArrow.addEventListener("mouseenter", menuHover);
-  rightArrow.addEventListener("mouseenter", menuHover);
-  leftArrow.addEventListener("mouseleave", menuHoverExit);
-  rightArrow.addEventListener("mouseleave", menuHoverExit);
 
 navigationMenu.insertAdjacentElement("afterbegin", leftArrow);
 navigationMenu.insertAdjacentElement("beforeend", rightArrow);
