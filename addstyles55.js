@@ -91,10 +91,10 @@ var classes = `
 #P-Navigation-Menu .menuNumber:hover:not(.active), #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
   background-color: #2d59d6;
 }
-#P-Navigation-Menu .menuArrow-r:hover {
+#P-Navigation-Menu .menuArrow-r:hover a {
   transform: translateX(60%) scale(1.1);
 }
-#P-Navigation-Menu .menuArrow-l:hover {
+#P-Navigation-Menu .menuArrow-l:hover a {
   transform: translateX(-60%) scale(1.1);
 }
 `;
