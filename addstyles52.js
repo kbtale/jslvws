@@ -57,14 +57,13 @@ var classes = `
   font-size: 1.2em;
   font-family: Arial;
   transition: all .3s;
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 #P-Navigation-Menu .menuNumber {
   width: 3.5em;
   heigth: 3.5em;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -77,7 +76,11 @@ var classes = `
   heigth: 3.5em;
 }
 
-#P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
+#P-Navigation-Menu .menuArrow-l {
+  justify-content: flex-end;
+}
+
+#P-Navigation-Menu .menuNumber:hover:not(.active), #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
   background-color: #2d59d6;
 }
 #P-Navigation-Menu .menuArrow-r:hover {
