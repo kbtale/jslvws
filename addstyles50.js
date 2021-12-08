@@ -61,10 +61,11 @@ var classes = `
 }
 
 #P-Navigation-Menu .menuNumber {
+  width: 3.5em;
+  heigth: 3.5em;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
 }
 
 #P-Navigation-Menu .menuNumber.active {
