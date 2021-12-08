@@ -42,6 +42,7 @@ navigationMenu.insertAdjacentElement("beforeend", rightArrow);
 var classes = `
 #P-Navigation-Menu {
   display: inline-flex;
+  height: 2.2em;
   background-color: #2c63ff;
   box-shadow: 0 4px 12px #22213c;
   user-select: none;
@@ -72,14 +73,14 @@ var classes = `
   heigth: 2.2em;
 }
 
-#P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
+#P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
   transform: scale(1.05);
 }
-#P-Navigation-Menu .menuNumber:hover {
+#P-Navigation-Menu .menuArrow-r:hover {
   transform: translateX(10%);
 }
-#P-Navigation-Menu .menuNumber:hover {
-  transform: scale(10%);
+#P-Navigation-Menu .menuArrow-l:hover {
+  transform: translateX(-10%);
 }
 `;
 
