@@ -63,15 +63,24 @@ var classes = `
   height: 1.5em;
 }
 
-#P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
-  width: 1.5em;
-  heigth: 1.5em;
+#P-Navigation-Menu .menuNumber.active {
+  background-color: #1944bd;
 }
 
-#P-Navigation-Menu .menuNumber:hover {
+#P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
+  width: 2.2em;
+  heigth: 2.2em;
+}
+
+#P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
   transform: scale(1.05);
 }
-
+#P-Navigation-Menu .menuNumber:hover {
+  transform: translateX(10%);
+}
+#P-Navigation-Menu .menuNumber:hover {
+  transform: scale(10%);
+}
 `;
 
 styles = document.createElement('style');
@@ -98,7 +107,7 @@ function toggleWorksheets(sw){
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
   for (var i = 0; i < worksheetsList.length; i++) { 
-    (i != sw) ? menuElements[i].style.backgroundColor = '#00b0ea' : menuElements[i].style.backgroundColor = '#1261a0';
+    (i != sw) ? menuElements[i].removeClass("active") : menuElements[i].addClass("active");
   }
   if (sw > 5){
     
