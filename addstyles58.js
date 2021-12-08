@@ -138,10 +138,10 @@ function toggleWorksheets(sw){
   }
   for (var i = 2; i < menuList.length - 3; i++){
     if (i != menuList.length && i != menuList.length-1 && i != menuList.length+1) {
-      menuElements[i].style.display = 'flex';
+      menuList[i].style.display = 'flex';
     }
     else {
-      menuElements[i].style.display = 'none';
+      menuList[i].style.display = 'none';
     }
   }
 }
