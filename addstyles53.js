@@ -26,8 +26,12 @@ for (var i = 0; i < worksheetsList.length; i++) {
 
 var leftArrow = document.createElement("a");
 var rightArrow = document.createElement("a");
-leftArrow.innerHTML = "&#8678;";
-rightArrow.innerHTML = "&#8680;";
+var la = document.createElement("a");
+var ra = document.createElement("a");
+leftArrow.appendChild(la);
+rightArrow.appendChild(ra);
+la.innerHTML = "&#8678;";
+ra.innerHTML = "&#8680;";
 leftArrow.classList.add("menuItem");
 leftArrow.classList.add("menuArrow-l");
 rightArrow.classList.add("menuItem");
