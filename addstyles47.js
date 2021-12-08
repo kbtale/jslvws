@@ -42,12 +42,12 @@ navigationMenu.insertAdjacentElement("beforeend", rightArrow);
 var classes = `
 #P-Navigation-Menu {
   display: inline-flex;
-  height: 2.2em;
+  height: 3.5em;
   background-color: #2c63ff;
   box-shadow: 0 4px 12px #22213c;
   user-select: none;
   overflow: hidden;
-  border-radius = 15px;
+  border-radius: 15px;
 }
 
 #P-Navigation-Menu .menuItem {
@@ -57,11 +57,16 @@ var classes = `
   font-size: 1.2em;
   font-family: Arial;
   transition: all .3s;
+  text-align: center;
 }
 
 #P-Navigation-Menu .menuNumber {
   width: 1.5em;
   height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }
 
 #P-Navigation-Menu .menuNumber.active {
@@ -69,8 +74,8 @@ var classes = `
 }
 
 #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
-  width: 2.2em;
-  heigth: 2.2em;
+  width: 3.9em;
+  heigth: 3.9em;
 }
 
 #P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
@@ -108,7 +113,7 @@ function toggleWorksheets(sw){
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
   for (var i = 0; i < worksheetsList.length; i++) { 
-    (i != sw) ? menuElements[i].removeClass("active") : menuElements[i].addClass("active");
+    (i != sw) ? menuElements[i].removeClass("active") : menuElements[i].classList.add("active");
   }
   if (sw > 5){
     
