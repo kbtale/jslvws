@@ -61,8 +61,6 @@ var classes = `
 }
 
 #P-Navigation-Menu .menuNumber {
-  width: 1.5em;
-  height: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,18 +72,18 @@ var classes = `
 }
 
 #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
-  width: 3.9em;
-  heigth: 3.9em;
+  width: 3.5em;
+  heigth: 3.5em;
 }
 
 #P-Navigation-Menu .menuNumber:hover, #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
-  transform: scale(1.05);
+  background-color: #2d59d6;
 }
 #P-Navigation-Menu .menuArrow-r:hover {
-  transform: translateX(10%);
+  transform: translateX(10%) scale(1.1);
 }
 #P-Navigation-Menu .menuArrow-l:hover {
-  transform: translateX(-10%);
+  transform: translateX(-10%) scale(1.1);
 }
 `;
 
@@ -113,7 +111,7 @@ function toggleWorksheets(sw){
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
   for (var i = 0; i < worksheetsList.length; i++) { 
-    (i != sw) ? menuElements[i].removeClass("active") : menuElements[i].classList.add("active");
+    (i != sw) ? menuElements[i].classList.remove("active") : menuElements[i].classList.add("active");
   }
   if (sw > 5){
     
