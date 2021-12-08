@@ -79,13 +79,18 @@ var classes = `
   width: 3.5em;
   heigth: 3.5em;
 }
-#P-Navigation-Menu .menuArrow-r {
+#P-Navigation-Menu .menuArrow-r a {
   margin-left: 6px;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .menuArrow-l {
   justify-content: flex-end;
+}
+
+#P-Navigation-Menu .menuArrow-l a {
   margin-right: 6px;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .menuNumber:hover:not(.active), #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
