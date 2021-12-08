@@ -7,6 +7,7 @@ var menuList = [];
 navigationMenu.style.display = "flex";
 navigationMenu.style.alignItems = "center";
 navigationMenu.style.justifyContent = "center";
+navigationMenu.style.backgroundColor = "#2c63ff";
 navigationMenu.style.marginTop = navigationMenu.style.marginBottom = "10px";
 menuElements = [];
 
