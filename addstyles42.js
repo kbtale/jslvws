@@ -1,4 +1,5 @@
-var navigationMenu = document.getElementById("P-Navigation");
+var navigationMenuContainer = document.getElementById("P-Navigation");
+var navigationMenu = document.getElementById("P-Navigation-Menu");
 var container = document.getElementById("P-Container");
 var worksheetsList = document.getElementsByClassName("liveworksheet");
 var selectedWorksheet = 0;
@@ -7,7 +8,6 @@ var menuList = [];
 navigationMenu.style.display = "flex";
 navigationMenu.style.alignItems = "center";
 navigationMenu.style.justifyContent = "center";
-navigationMenu.style.backgroundColor = "#2c63ff";
 navigationMenu.style.marginTop = navigationMenu.style.marginBottom = "10px";
 menuElements = [];
 
@@ -65,8 +65,9 @@ navigationMenu.insertAdjacentElement("afterbegin", leftArrow);
 navigationMenu.insertAdjacentElement("beforeend", rightArrow);
 
 var classes = `
-#P-Navigation {
-  display: flex;
+#P-Navigation-Menu {
+  display: inline-flex;
+  background-color: #2c63ff;
 }
 `;
 
