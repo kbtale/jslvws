@@ -16,20 +16,12 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.value = i;
   page = i+1;
   menuEl.innerHTML = page;
-  menuEl.style.cursor = "pointer";
-  menuEl.userSelect = "none";
-  menuEl.style.backgroundColor = "#00b0ea";
-  menuEl.style.color = "#FFFFFF";
-  menuEl.style.fontSize = "1.2em";
-  menuEl.style.fontFamily = "Arial";
+  menuEl.classList.add("menuNumber");
   menuEl.style.paddingLeft = menuEl.style.paddingRight = "12px";
   menuEl.style.paddingTop = menuEl.style.paddingBotton = "10px";
   menuEl.style.marginLeft = menuEl.style.marginRight = "5px";
-  menuEl.style.borderRadius = "5%";
   menuEl.style.transition = "all 0.3s";
   menuEl.addEventListener("click", changeWorksheet);
-  menuEl.addEventListener("mouseenter", menuHover);
-  menuEl.addEventListener("mouseleave", menuHoverExit);
   menuElements.push(menuEl);
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
@@ -68,7 +60,24 @@ var classes = `
 #P-Navigation-Menu {
   display: inline-flex;
   background-color: #2c63ff;
+  box-shadow: 0 10px 20px #26418f;
+  user-select: none;
+  overflow: hidden;
 }
+
+#P-Navigation-Menu .menuNumber {
+  cursor: pointer;
+  user-select: none;
+  background-color: #00b0ea;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-family: Arial;
+}
+
+#P-Navigation-Menu .menuNumber:hover {
+  transform: scale(1.05);
+}
+
 `;
 
 styles = document.createElement('style');
@@ -120,11 +129,4 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   toggleWorksheets(0);
-}
-
-function menuHover(ev){
-ev.currentTarget.style.transform = "scale(1.1)";
-}
-function menuHoverExit(ev){
-ev.currentTarget.style.transform = "scale(1)";
 }
