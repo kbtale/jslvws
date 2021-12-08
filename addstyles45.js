@@ -5,10 +5,10 @@ var worksheetsList = document.getElementsByClassName("liveworksheet");
 var selectedWorksheet = 0;
 var menuList = [];
 
-navigationMenu.style.display = "flex";
-navigationMenu.style.alignItems = "center";
-navigationMenu.style.justifyContent = "center";
-navigationMenu.style.marginTop = navigationMenu.style.marginBottom = "10px";
+navigationMenuContainer.style.display = "flex";
+navigationMenuContainer.style.alignItems = "center";
+navigationMenuContainer.style.justifyContent = "center";
+navigationMenuContainer.style.marginTop = navigationMenuContainer.style.marginBottom = "10px";
 menuElements = [];
 
 for (var i = 0; i < worksheetsList.length; i++) { 
@@ -16,11 +16,8 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.value = i;
   page = i+1;
   menuEl.innerHTML = page;
+  menuEl.classList.add("menuItem");
   menuEl.classList.add("menuNumber");
-  menuEl.style.paddingLeft = menuEl.style.paddingRight = "12px";
-  menuEl.style.paddingTop = menuEl.style.paddingBotton = "10px";
-  menuEl.style.marginLeft = menuEl.style.marginRight = "5px";
-  menuEl.style.transition = "all 0.3s";
   menuEl.addEventListener("click", changeWorksheet);
   menuElements.push(menuEl);
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
@@ -31,20 +28,10 @@ var leftArrow = document.createElement("a");
 var rightArrow = document.createElement("a");
 leftArrow.innerHTML = "&#8678;";
 rightArrow.innerHTML = "&#8680;";
-  leftArrow.style.cursor = rightArrow.style.cursor = "pointer";
-  leftArrow.style.userSelect = rightArrow.style.userSelect = "none";
-  leftArrow.style.backgroundColor = rightArrow.style.backgroundColor = "#00b0ea";
-  leftArrow.style.color = rightArrow.style.color = "#FFFFFF";
-  leftArrow.style.fontSize = rightArrow.style.fontSize = "1.2em";
-  leftArrow.style.fontFamily = rightArrow.style.fontFamily = "Arial";
-  leftArrow.style.paddingLeft = rightArrow.style.paddingLeft = "12px";
-  leftArrow.style.paddingRight = rightArrow.style.paddingRight = "12px";
-  leftArrow.style.paddingTop = rightArrow.style.paddingTop = "5px";
-  leftArrow.style.paddingBottom = rightArrow.style.paddingBottom = "5px";
-  leftArrow.style.MarginLeft = rightArrow.style.MarginLeft = "5px";
-  leftArrow.style.MarginRight = rightArrow.style.MarginRight = "5px";
-  leftArrow.style.borderRadius = rightArrow.style.borderRadius = "5%";
-  leftArrow.style.transition = rightArrow.style.transition = "all 0.4s";
+leftArrow.classList.add("menuItem");
+leftArrow.classList.add("menuArrow-l");
+rightArrow.classList.add("menuItem");
+rightArrow.classList.add("menuArrow-r");
   leftArrow.value = rightArrow.value = -1;
   leftArrow.addEventListener("click", function(ev){if (selectedWorksheet > 0) {selectedWorksheet -= 1; changeWorksheet(ev);}});
   rightArrow.addEventListener("click", function(ev){if (selectedWorksheet < worksheetsList.length-1) {selectedWorksheet += 1; changeWorksheet(ev);}});
@@ -56,18 +43,29 @@ var classes = `
 #P-Navigation-Menu {
   display: inline-flex;
   background-color: #2c63ff;
-  box-shadow: 0 10px 20px #26418f;
+  box-shadow: 0 4px 12px #22213c;
   user-select: none;
   overflow: hidden;
+  border-radius = 15px;
 }
 
-#P-Navigation-Menu .menuNumber {
+#P-Navigation-Menu .menuItem {
   cursor: pointer;
   user-select: none;
-  background-color: #00b0ea;
   color: #FFFFFF;
   font-size: 1.2em;
   font-family: Arial;
+  transition: all .3s;
+}
+
+#P-Navigation-Menu .menuNumber {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+#P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
+  width: 1.5em;
+  heigth: 1.5em;
 }
 
 #P-Navigation-Menu .menuNumber:hover {
