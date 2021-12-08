@@ -24,6 +24,15 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuList.push(menuEl);
 }
 
+var dot1 = document.createElement("span");
+var dot2 = document.createElement("span");
+dot1.classList.add("dot");
+dot1.classList.add("disabled");
+dot2.classList.add("dot");
+dot2.classList.add("disabled");
+navigationMenu.insertAdjacentElement("afterbegin", dot1);
+navigationMenu.insertAdjacentElement("beforeend", dot2);
+
 var leftArrow = document.createElement("a");
 var rightArrow = document.createElement("a");
 var la = document.createElement("a");
@@ -101,6 +110,19 @@ var classes = `
 }
 #P-Navigation-Menu .menuArrow-l:hover a {
   transform: translateX(-60%) scale(1.1);
+}
+
+#P-Navigation-Menu .dot {
+  height: 1em;
+  width: 1em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all .3s;
+}
+
+#P-Navigation-Menu .dot.disabled {
+  width: 0px;
 }
 `;
 
