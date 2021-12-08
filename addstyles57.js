@@ -80,7 +80,7 @@ var classes = `
   heigth: 3.5em;
 }
 #P-Navigation-Menu .menuArrow-r a {
-  margin-left: 6px;
+  margin-left: .9em;
   transition: all .3s;
 }
 
@@ -89,7 +89,7 @@ var classes = `
 }
 
 #P-Navigation-Menu .menuArrow-l a {
-  margin-right: 6px;
+  margin-right: .9em;
   transition: all .3s;
 }
 
