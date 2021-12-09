@@ -157,7 +157,9 @@ else {
     styles.appendChild(document.createTextNode(classes));
 }
 
-window.onload = showAll;
+document.addEventListener("DOMContentLoaded", function() {
+  showAll();
+});
 
 function changeWorksheet(ev){
   if (ev.currentTarget.value != -1)
@@ -214,7 +216,6 @@ function toggleWorksheets(sw){
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
- console.log(JSON.stringify(worksheetsList));
  navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
     console.log(worksheetsList[j]);
