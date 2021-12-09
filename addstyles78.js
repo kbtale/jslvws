@@ -214,7 +214,10 @@ function toggleWorksheets(sw){
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
- console.log(worksheetsList);
+ 
+ //Fixing Firefox bug
+ menuList[0].click();
+ 
  navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
