@@ -201,7 +201,7 @@ function toggleWorksheets(sw){
     setTimeout(()=>{
       dotContainer1.classList.remove("disabled");
       dotContainer2.classList.remove("disabled");
-    },300);
+    },150);
       dotContainer3.classList.add("disabled");
       dotContainer4.classList.add("disabled");
   } else if (sw < 3) {
@@ -210,13 +210,13 @@ function toggleWorksheets(sw){
       dotContainer3.classList.add("disabled");
     setTimeout(()=>{
       dotContainer4.classList.remove("disabled");
-    },300);
+    },150);
   } else if (sw > menuList.length-4) {
       dotContainer1.classList.add("disabled");
       dotContainer2.classList.add("disabled");
     setTimeout(()=>{
       dotContainer3.classList.remove("disabled");
-    },300);
+    },150);
       dotContainer4.classList.add("disabled");
   }
   
