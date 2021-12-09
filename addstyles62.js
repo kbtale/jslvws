@@ -20,16 +20,19 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.addEventListener("click", changeWorksheet);
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
+  if (i === 2){
+    var dot1 = document.createElement("span");
+    dot1.classList.add("dot");
+    dot1.classList.add("disabled");
+    navigationMenu.insertAdjacentElement("beforeend", dot1);
+  }
+  if (i === worksheetsList.length-4){
+    var dot2 = document.createElement("span");
+    dot2.classList.add("dot");
+    dot2.classList.add("disabled");
+    navigationMenu.insertAdjacentElement("beforeend", dot2);
+  }
 }
-
-var dot1 = document.createElement("span");
-var dot2 = document.createElement("span");
-dot1.classList.add("dot");
-dot1.classList.add("disabled");
-dot2.classList.add("dot");
-dot2.classList.add("disabled");
-navigationMenu.insertAdjacentElement("afterbegin", dot1);
-navigationMenu.insertAdjacentElement("beforeend", dot2);
 
 var leftArrow = document.createElement("a");
 var rightArrow = document.createElement("a");
@@ -161,7 +164,7 @@ function toggleWorksheets(sw){
   } else {
     dot2.classList.add("disabled");
   }
-  for (var i = 2; i < menuList.length - 3; i++){
+  for (var i = 3; i < menuList.length - 3; i++){
     if (i != sw && i != sw-1 && i != sw+1) {
       menuList[i].style.display = 'none';
     }
