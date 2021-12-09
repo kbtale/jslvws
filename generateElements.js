@@ -92,8 +92,8 @@ var classes = `
 }
 
 #P-Navigation-Menu:hover {
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 10px 10px 11px -2px rgba(10,10,20,0); 
-  box-shadow: 0px 10px 13px -7px #000000, 10px 10px 11px -2px rgba(10,10,20,0);
+  -webkit-box-shadow: 0px 6px 8px -4px #101010, 5px 5px 6px -2px rgba(10,10,20,0); 
+  box-shadow: 0px 6px 8px -4px #101010, 5px 5px 6px -2px rgba(10,10,20,0);
 }
 
 #P-Navigation-Menu .menuItem {
