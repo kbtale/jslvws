@@ -141,7 +141,8 @@ var classes = `
 }
 
 #P-Navigation-Menu .dotContainer.disabled {
-  width: 0px;
+  width: 0em;
+  padding: 0;
 }
 `;
 
