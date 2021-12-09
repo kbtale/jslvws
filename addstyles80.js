@@ -220,7 +220,7 @@ function showAll(){
  
  navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
-    console.log(JSON.parse(worksheetsList[j]));
+    console.log(worksheetsList[j]);
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
