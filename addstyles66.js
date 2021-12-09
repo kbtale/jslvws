@@ -74,6 +74,7 @@ var classes = `
   transition: all .3s;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 #P-Navigation-Menu .menuNumber {
@@ -165,12 +166,29 @@ function toggleWorksheets(sw){
   } else {
     dot2.classList.add("disabled");
   }
-  for (var i = 1; i < menuList.length - 2; i++){
-    if (i != sw && i != sw-1 && i != sw+1) {
-      menuList[i].style.maxWidth = '0px';
+  for (var i = 1; i < menuList.length - 1; i++){
+    if (sw > 2 && sw < menuList.length-3){
+      if (i != sw && i != sw-1 && i != sw+1) {
+        menuList[i].style.maxWidth = '0px';
+      }
+      else {
+        menuList[i].style.maxWidth = '';
+      }
     }
-    else {
-      menuList[i].style.maxWidth = '';
+    else if (sw < 3) {
+      if (i != sw && i != sw-1) {
+        menuList[i].style.maxWidth = '0px';
+      }
+      else {
+        menuList[i].style.maxWidth = '';
+      }
+    }
+    else if (sw > menuList.length-4) {
+        menuList[i].style.maxWidth = '0px';
+      }
+      else {
+        menuList[i].style.maxWidth = '';
+      }
     }
   }
 }
