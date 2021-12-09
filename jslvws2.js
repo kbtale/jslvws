@@ -29,7 +29,7 @@ function loadliveworksheet(worksheetid,codigoembed,alturaenpx,subdominio) {
 		lwsinnerdiv.setAttribute("id", "lwsinnerdiv"+worksheetid);
 		lwsouterdiv.appendChild(lwsinnerdiv);
 
-		var lwsfullscreenicon = document.createElement("img"); 
+		/*var lwsfullscreenicon = document.createElement("img"); 
 		lwsfullscreenicon.setAttribute("id", "lwsfullscreenbutton"+worksheetid);
 		lwsfullscreenicon.setAttribute("src", "https://files.liveworksheets.com/images/fullscreenicon.png");
 		lwsfullscreenicon.style.position = "absolute";
@@ -52,7 +52,7 @@ function loadliveworksheet(worksheetid,codigoembed,alturaenpx,subdominio) {
 		lwsfullscreenicon.addEventListener('click', function() {
 			lwsfullscreen(worksheetid);
 		}, false);
-
+		*/
 
 		var lwsiframe = document.createElement("iframe");
 		lwsiframe.setAttribute("id", "lwsiframe"+worksheetid);
@@ -70,7 +70,7 @@ function loadliveworksheet(worksheetid,codigoembed,alturaenpx,subdominio) {
 	}, numerolws);
 
 }
-
+/*
 function lwsfullscreen(worksheetid) {
 	if (document.getElementById("lwsouterdiv"+worksheetid).style.position == "fixed") {
 		document.getElementById("lwsinnerdiv"+worksheetid).style.height = "1px";
@@ -103,7 +103,7 @@ function lwsfullscreen(worksheetid) {
 		document.getElementById("lwsouterdiv"+worksheetid).style.height = "100%";
 	}
 }
-
+*/
 function lwsfill(worksheetid) {
 worksheetheight = Number(document.getElementById("lwsiframe"+worksheetid).style.height.replace('px', ''));
 anchuraadaptada = document.getElementById("lwsouterdiv"+worksheetid).offsetWidth;
