@@ -18,6 +18,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.classList.add("menuItem");
   menuEl.classList.add("menuNumber");
   menuEl.addEventListener("click", changeWorksheet);
+  navigationMenu.style.display = "none";
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
   if (i === 0){
@@ -183,7 +184,7 @@ function toggleWorksheets(sw){
   } else {
     dotContainer2.classList.add("disabled");
   }
-  for (var i = 1; i < menuList.length - 1; i++){
+  for (var i = 2; i < menuList.length - 2; i++){
     if (sw > 2 && sw < menuList.length-3){
       if (i != sw && i != sw-1 && i != sw+1) {
         menuList[i].style.maxWidth = '0px';
@@ -213,6 +214,7 @@ function toggleWorksheets(sw){
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
+ navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
