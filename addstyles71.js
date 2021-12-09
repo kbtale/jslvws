@@ -25,7 +25,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     dotContainer1.classList.add("dotContainer");
     var dot1 = document.createElement("span");
     dot1.classList.add("dot");
-    dot1.classList.add("disabled");
+    dotContainer1.classList.add("disabled");
     dotContainer1.insertAdjacentElement("beforeend", dot1);
     navigationMenu.insertAdjacentElement("beforeend", dotContainer1);
   }
@@ -34,7 +34,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     dotContainer2.classList.add("dotContainer");
     var dot2 = document.createElement("span");
     dot2.classList.add("dot");
-    dot2.classList.add("disabled");
+    dotContainer2.classList.add("disabled");
     dotContainer2.insertAdjacentElement("beforeend", dot2);
     navigationMenu.insertAdjacentElement("beforeend", dotContainer2);
   }
