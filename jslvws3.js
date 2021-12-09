@@ -112,5 +112,5 @@ document.getElementById("lwsiframe"+worksheetid).style.transform = "scale("+prop
 document.getElementById("lwsinnerdiv"+worksheetid).style.height = String(worksheetheight * proporcion) + "px";
 document.getElementById("lwsinnerdiv"+worksheetid).style.width = String(1024 * proporcion) + "px";
 document.getElementById("lwsouterdiv"+worksheetid).style.height = String((worksheetheight * proporcion)) + "px";
-document.getElementById("lwsfullscreenbutton"+worksheetid).style.top = String((worksheetheight * proporcion) - 70) + "px";
+//document.getElementById("lwsfullscreenbutton"+worksheetid).style.top = String((worksheetheight * proporcion) - 70) + "px";
 }
