@@ -90,6 +90,10 @@ var classes = `
   transition: all .3s;
 }
 
+#P-Navigation-Menu:hover {
+  box-shadow: 0px 3px 5px #112233;
+}
+
 #P-Navigation-Menu .menuItem {
   cursor: pointer;
   user-select: none;
@@ -261,7 +265,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   } catch {
-    setTimeout(() => {menuList[0].click();}, 2000);
+    setTimeout(() => {menuList[0].click();}, 1500);
   }
  }
 }
