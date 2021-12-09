@@ -92,6 +92,7 @@ var classes = `
 
 #P-Navigation-Menu:hover {
   box-shadow: 0px 3px 5px #112233;
+  transform: translateY(5px);
 }
 
 #P-Navigation-Menu .menuItem {
