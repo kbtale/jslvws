@@ -160,9 +160,9 @@ function toggleWorksheets(sw){
   }
   
   if (sw < menuList.length - 5) {
-    dot2.classList.add("disabled");
-  } else {
     dot2.classList.remove("disabled");
+  } else {
+    dot2.classList.add("disabled");
   }
   for (var i = 3; i < menuList.length - 3; i++){
     if (i != sw && i != sw-1 && i != sw+1) {
