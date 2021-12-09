@@ -21,16 +21,22 @@ for (var i = 0; i < worksheetsList.length; i++) {
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
   if (i === 0){
+    var dotContainer1 = document.createElement("a");
+    dotContainer1.classList.add("dotContainer");
     var dot1 = document.createElement("span");
     dot1.classList.add("dot");
     dot1.classList.add("disabled");
-    navigationMenu.insertAdjacentElement("beforeend", dot1);
+    dotContainer1.insertAdjacentElement("beforeend", dot1);
+    navigationMenu.insertAdjacentElement("beforeend", dotContainer1);
   }
   if (i === worksheetsList.length-2){
+    var dotContainer2 = document.createElement("a");
+    dotContainer2.classList.add("dotContainer");
     var dot2 = document.createElement("span");
     dot2.classList.add("dot");
     dot2.classList.add("disabled");
-    navigationMenu.insertAdjacentElement("beforeend", dot2);
+    dotContainer2.insertAdjacentElement("beforeend", dot2);
+    navigationMenu.insertAdjacentElement("beforeend", dotContainer2);
   }
 }
 
@@ -115,6 +121,13 @@ var classes = `
   transform: translateX(-60%) scale(1.1);
 }
 
+#P-Navigation-Menu .dotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 #P-Navigation-Menu .dot {
   height: 1em;
   width: 1em;
@@ -124,7 +137,7 @@ var classes = `
   transition: all .3s;
 }
 
-#P-Navigation-Menu .dot.disabled {
+#P-Navigation-Menu .dotContainer.disabled {
   width: 0px;
 }
 `;
@@ -156,15 +169,15 @@ function toggleWorksheets(sw){
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
   if (sw > 2){
-    dot1.classList.remove("disabled");
+    dotContainer1.classList.remove("disabled");
   } else {
-    dot1.classList.add("disabled");
+    dotContainer1.classList.add("disabled");
   }
   
   if (sw < menuList.length - 3) {
-    dot2.classList.remove("disabled");
+    dotContainer2.classList.remove("disabled");
   } else {
-    dot2.classList.add("disabled");
+    dotContainer2.classList.add("disabled");
   }
   for (var i = 1; i < menuList.length - 1; i++){
     if (sw > 2 && sw < menuList.length-3){
