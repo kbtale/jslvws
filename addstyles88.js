@@ -212,17 +212,17 @@ function toggleWorksheets(sw){
       }
     }
   }
+    for (var j = 0; j < worksheetsList.length; j++){
+    console.log(worksheetsList[j]);
+    worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
+    worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+  }
 }
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
  navigationMenu.style.display = "";
   /*
-  for (var j = 0; j < worksheetsList.length; j++){
-    console.log(worksheetsList[j]);
-    worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
-    worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
-  }
   */
   toggleWorksheets(0);
 }
