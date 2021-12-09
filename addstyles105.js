@@ -40,6 +40,24 @@ for (var i = 0; i < worksheetsList.length; i++) {
     dotContainer2.insertAdjacentElement("beforeend", dot2);
     navigationMenu.insertAdjacentElement("beforeend", dotContainer2);
   }
+   if (i === 1){
+    var dotContainer3 = document.createElement("a");
+    dotContainer3.classList.add("dotContainer");
+    var dot3 = document.createElement("span");
+    dot3.classList.add("dot");
+    dotContainer3.classList.add("disabled");
+    dotContainer3.insertAdjacentElement("beforeend", dot3);
+    navigationMenu.insertAdjacentElement("beforeend", dotContainer3);
+  }
+   if (i === worksheetsList.length-3){
+    var dotContainer4 = document.createElement("a");
+    dotContainer4.classList.add("dotContainer");
+    var dot4 = document.createElement("span");
+    dot4.classList.add("dot");
+    dotContainer4.classList.add("disabled");
+    dotContainer4.insertAdjacentElement("beforeend", dot4);
+    navigationMenu.insertAdjacentElement("beforeend", dotContainer4);
+  }
 }
 
 var leftArrow = document.createElement("a");
@@ -177,17 +195,24 @@ function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) {
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
-  if (sw > 2){
+  
+  if (sw > 2 && sw < menuList.length-3){
     dotContainer1.classList.remove("disabled");
-  } else {
+    dotContainer2.classList.remove("disabled");
+    dotContainer3.classList.add("disabled");
+    dotContainer4.classList.add("disabled");
+  } else if (sw < 3) {
     dotContainer1.classList.add("disabled");
+    dotContainer2.classList.add("disabled");
+    dotContainer3.classList.add("disabled");
+    dotContainer4.classList.remove("disabled");
+  } else if (sw > menuList.length-4) {
+    dotContainer1.classList.add("disabled");
+    dotContainer2.classList.add("disabled");
+    dotContainer3.classList.remove("disabled");
+    dotContainer4.classList.add("disabled");
   }
   
-  if (sw < menuList.length - 3) {
-    dotContainer2.classList.remove("disabled");
-  } else {
-    dotContainer2.classList.add("disabled");
-  }
   for (var i = 1; i < menuList.length - 1; i++){
     if (sw > 2 && sw < menuList.length-3){
       if (i != sw && i != sw-1 && i != sw+1) {
