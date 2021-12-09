@@ -20,13 +20,13 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.addEventListener("click", changeWorksheet);
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
-  if (i === 2){
+  if (i === 0){
     var dot1 = document.createElement("span");
     dot1.classList.add("dot");
     dot1.classList.add("disabled");
     navigationMenu.insertAdjacentElement("beforeend", dot1);
   }
-  if (i === worksheetsList.length-4){
+  if (i === worksheetsList.length-2){
     var dot2 = document.createElement("span");
     dot2.classList.add("dot");
     dot2.classList.add("disabled");
@@ -155,13 +155,13 @@ function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) { 
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
-  if (sw > 4){
+  if (sw > 2){
     dot1.classList.remove("disabled");
   } else {
     dot1.classList.add("disabled");
   }
   
-  if (sw < menuList.length - 5) {
+  if (sw < menuList.length - 3) {
     dot2.classList.remove("disabled");
   } else {
     dot2.classList.add("disabled");
@@ -176,7 +176,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw < 3) {
-      if (i != sw && i != sw-1) {
+      if (i != sw && i != sw < 3) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
@@ -184,6 +184,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw > menuList.length-4) {
+       if (i < sw) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
