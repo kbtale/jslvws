@@ -148,7 +148,7 @@ var classes = `
   overflow: hidden;
   width: 3.5em;
   height: 3.5em;
-  transition: all .3s;
+  transition: all 5s;
 }
 
 #P-Navigation-Menu .dot {
@@ -157,13 +157,12 @@ var classes = `
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  transition: all .3s;
 }
 
 #P-Navigation-Menu .dotContainer.disabled {
   width: 0em;
   padding: 0;
-  transition: all .3s;
+  transition: all 5s;
 }
 `;
 
@@ -201,7 +200,7 @@ function toggleWorksheets(sw){
     setTimeout(()=>{
       dotContainer1.classList.remove("disabled");
       dotContainer2.classList.remove("disabled");
-    },150);
+    },5000);
       dotContainer3.classList.add("disabled");
       dotContainer4.classList.add("disabled");
   } else if (sw < 3) {
@@ -210,13 +209,13 @@ function toggleWorksheets(sw){
       dotContainer3.classList.add("disabled");
     setTimeout(()=>{
       dotContainer4.classList.remove("disabled");
-    },150);
+    },5000);
   } else if (sw > menuList.length-4) {
       dotContainer1.classList.add("disabled");
       dotContainer2.classList.add("disabled");
     setTimeout(()=>{
       dotContainer3.classList.remove("disabled");
-    },150);
+    },5000);
       dotContainer4.classList.add("disabled");
   }
   
