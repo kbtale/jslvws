@@ -153,7 +153,7 @@ function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) { 
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
-  if (sw > 5){
+  if (sw > 4){
     dot1.classList.remove("disabled");
   } else {
     dot1.classList.add("disabled");
