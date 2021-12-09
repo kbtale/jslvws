@@ -214,7 +214,7 @@ function toggleWorksheets(sw){
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
- 
+ console.log(JSON.parse(worksheetsList));
  navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
     console.log(worksheetsList[j]);
