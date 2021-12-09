@@ -148,7 +148,7 @@ function toggleWorksheets(sw){
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
   for (var i = 0; i < worksheetsList.length; i++) { 
-    (i != sw) ? menuElements[i].classList.remove("active") : menuElements[i].classList.add("active");
+    (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
   if (sw > 5){
     dot1.classList.remove("disabled");
