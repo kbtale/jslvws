@@ -159,7 +159,7 @@ else {
 }
 
 window.addEventListener("load", function() {
- setTimeout(showAll(), 3000);
+ setTimeout(showAll(), 500);
 
 });
 
