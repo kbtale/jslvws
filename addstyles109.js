@@ -152,8 +152,8 @@ var classes = `
 }
 
 #P-Navigation-Menu .dot {
-  height: 1em;
-  width: 1em;
+  height: .8em;
+  width: .8em;
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
@@ -198,20 +198,26 @@ function toggleWorksheets(sw){
   }
   
   if (sw > 2 && sw < menuList.length-3){
-    dotContainer3.classList.add("disabled");
-    dotContainer1.classList.remove("disabled");
-    dotContainer4.classList.add("disabled");
-    dotContainer2.classList.remove("disabled");
+    setTimeout(()=>{
+      dotContainer1.classList.remove("disabled");
+      dotContainer2.classList.remove("disabled");
+    },300);
+      dotContainer3.classList.add("disabled");
+      dotContainer4.classList.add("disabled");
   } else if (sw < 3) {
-    dotContainer1.classList.add("disabled");
-    dotContainer2.classList.add("disabled");
-    dotContainer3.classList.add("disabled");
-    dotContainer4.classList.remove("disabled");
+      dotContainer1.classList.add("disabled");
+      dotContainer2.classList.add("disabled");
+      dotContainer3.classList.add("disabled");
+    setTimeout(()=>{
+      dotContainer4.classList.remove("disabled");
+    },300);
   } else if (sw > menuList.length-4) {
-    dotContainer1.classList.add("disabled");
-    dotContainer2.classList.add("disabled");
-    dotContainer3.classList.remove("disabled");
-    dotContainer4.classList.add("disabled");
+      dotContainer1.classList.add("disabled");
+      dotContainer2.classList.add("disabled");
+    setTimeout(()=>{
+      dotContainer3.classList.remove("disabled");
+    },300);
+      dotContainer4.classList.add("disabled");
   }
   
   for (var i = 1; i < menuList.length - 1; i++){
