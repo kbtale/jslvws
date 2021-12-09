@@ -88,6 +88,7 @@ var classes = `
   overflow: hidden;
   border-radius: 15px;
   transition: all .3s;
+  max-width: 90vw;
 }
 
 #P-Navigation-Menu:hover {
