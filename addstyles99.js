@@ -227,9 +227,13 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     }
  } else if (browserName === "firefox"){
+  try {
   for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+  }
+  } catch {
+    la.click();
   }
  }
   toggleWorksheets(0);
