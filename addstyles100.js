@@ -225,6 +225,7 @@ function showAll(){
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+    toggleWorksheets(0);
     }
  } else if (browserName === "firefox"){
   try {
@@ -236,7 +237,6 @@ function showAll(){
     la.click();
   }
  }
-  toggleWorksheets(0);
 }
 
 function fnBrowserDetect(){
