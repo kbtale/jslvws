@@ -128,8 +128,8 @@ var classes = `
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-left: .9em;
-  padding-right: .9em;
+  width: 3.5em;
+  height: 3.5em;
   transition: all .3s;
 }
 
