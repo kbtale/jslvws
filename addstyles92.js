@@ -221,6 +221,7 @@ function showAll(){
  navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome") {
+    console.log("Chrome detected");
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
