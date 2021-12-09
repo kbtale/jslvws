@@ -84,7 +84,6 @@ var classes = `
   display: inline-flex;
   height: 3.5em;
   background-color: #2c63ff;
-  box-shadow: 0 3px 6px #22213c inset;
   user-select: none;
   overflow: hidden;
   border-radius: 15px;
