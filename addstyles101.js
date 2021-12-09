@@ -234,7 +234,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   } catch {
-    la.click();
+    menuList[0].click();
   }
  }
 }
