@@ -225,6 +225,4 @@ function showAll(){
   }
   */
   toggleWorksheets(0);
- //Fixing Firefox bug
- menuList[0].click();
 }
