@@ -184,7 +184,7 @@ function toggleWorksheets(sw){
   } else {
     dotContainer2.classList.add("disabled");
   }
-  for (var i = 2; i < menuList.length - 2; i++){
+  for (var i = 1; i < menuList.length - 1; i++){
     if (sw > 2 && sw < menuList.length-3){
       if (i != sw && i != sw-1 && i != sw+1) {
         menuList[i].style.maxWidth = '0px';
