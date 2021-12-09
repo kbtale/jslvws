@@ -174,7 +174,7 @@ function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) {
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
   }
-  for (var i = 0; i < worksheetsList.length; i++) { 
+  for (var i = 0; i < worksheetsList.length; i++) {
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
   if (sw > 2){
@@ -198,7 +198,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw < 3) {
-      if (i != sw && i >= 4) {
+      if (i != sw && i >= 4 && i != menuList.length -2) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
@@ -206,7 +206,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw > menuList.length-4) {
-       if (i < menuList.length-4) {
+       if (i < menuList.length-4 && i != 1) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
