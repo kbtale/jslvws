@@ -151,7 +151,7 @@ var classes = `
   overflow: hidden;
   width: 3.5em;
   height: 3.5em;
-  transition: all 5s;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .dot {
@@ -165,7 +165,7 @@ var classes = `
 #P-Navigation-Menu .dotContainer.disabled {
   width: 0em;
   padding: 0;
-  transition: all 5s;
+  transition: all .3s;
 }
 `;
 
