@@ -148,7 +148,7 @@ var classes = `
   overflow: hidden;
   width: 3.5em;
   height: 3.5em;
-  transition: all 10s;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .dot {
@@ -157,13 +157,13 @@ var classes = `
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  transition: all 10s;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .dotContainer.disabled {
   width: 0em;
   padding: 0;
-  transition: all 10s;
+  transition: all .3s;
 }
 `;
 
