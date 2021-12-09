@@ -157,7 +157,7 @@ else {
     styles.appendChild(document.createTextNode(classes));
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
   showAll();
 });
 
