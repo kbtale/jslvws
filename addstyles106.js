@@ -198,8 +198,8 @@ function toggleWorksheets(sw){
   
   if (sw > 2 && sw < menuList.length-3){
     dotContainer1.classList.remove("disabled");
-    dotContainer2.classList.remove("disabled");
     dotContainer3.classList.add("disabled");
+    dotContainer2.classList.remove("disabled");
     dotContainer4.classList.add("disabled");
   } else if (sw < 3) {
     dotContainer1.classList.add("disabled");
