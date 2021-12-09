@@ -126,12 +126,15 @@ var classes = `
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-left: .9em;
+  padding-right: .9em;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .dot {
   height: 1em;
   width: 1em;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: all .3s;
