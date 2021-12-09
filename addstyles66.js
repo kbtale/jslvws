@@ -62,6 +62,7 @@ var classes = `
   user-select: none;
   overflow: hidden;
   border-radius: 15px;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .menuItem {
@@ -164,12 +165,12 @@ function toggleWorksheets(sw){
   } else {
     dot2.classList.add("disabled");
   }
-  for (var i = 3; i < menuList.length - 3; i++){
+  for (var i = 1; i < menuList.length - 2; i++){
     if (i != sw && i != sw-1 && i != sw+1) {
-      menuList[i].style.display = 'none';
+      menuList[i].style.maxWidth = '0px';
     }
     else {
-      menuList[i].style.display = 'flex';
+      menuList[i].style.maxWidth = '';
     }
   }
 }
