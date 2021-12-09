@@ -99,6 +99,7 @@ var classes = `
   font-family: Arial;
   transition: all .3s;
   display: flex;
+  max-width: 3.5em;
   align-items: center;
   overflow: hidden;
 }
@@ -107,10 +108,12 @@ var classes = `
   width: 3.5em;
   heigth: 3.5em;
   justify-content: center;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .menuNumber.active {
   background-color: #1944bd;
+  transition: all .3s;
 }
 
 #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
@@ -197,25 +200,19 @@ function toggleWorksheets(sw){
   }
   
   if (sw > 2 && sw < menuList.length-3){
-    setTimeout(()=>{
       dotContainer1.classList.remove("disabled");
       dotContainer2.classList.remove("disabled");
-    },5000);
       dotContainer3.classList.add("disabled");
       dotContainer4.classList.add("disabled");
   } else if (sw < 3) {
       dotContainer1.classList.add("disabled");
       dotContainer2.classList.add("disabled");
       dotContainer3.classList.add("disabled");
-    setTimeout(()=>{
       dotContainer4.classList.remove("disabled");
-    },5000);
   } else if (sw > menuList.length-4) {
       dotContainer1.classList.add("disabled");
       dotContainer2.classList.add("disabled");
-    setTimeout(()=>{
       dotContainer3.classList.remove("disabled");
-    },5000);
       dotContainer4.classList.add("disabled");
   }
   
@@ -225,7 +222,7 @@ function toggleWorksheets(sw){
         menuList[i].style.maxWidth = '0px';
       }
       else {
-        menuList[i].style.maxWidth = '';
+        menuList[i].style.maxWidth = '3.5em';
       }
     }
     else if (sw < 3) {
@@ -233,7 +230,7 @@ function toggleWorksheets(sw){
         menuList[i].style.maxWidth = '0px';
       }
       else {
-        menuList[i].style.maxWidth = '';
+        menuList[i].style.maxWidth = '3.5em';
       }
     }
     else if (sw > menuList.length-4) {
@@ -241,7 +238,7 @@ function toggleWorksheets(sw){
         menuList[i].style.maxWidth = '0px';
       }
       else {
-        menuList[i].style.maxWidth = '';
+        menuList[i].style.maxWidth = '3.5em';
       }
     }
   }
