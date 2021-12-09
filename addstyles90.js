@@ -4,6 +4,7 @@ var container = document.getElementById("P-Container");
 var worksheetsList = document.getElementsByClassName("liveworksheet");
 var selectedWorksheet = 0;
 var menuList = [];
+var browserName;
 
 navigationMenuContainer.style.display = "flex";
 navigationMenuContainer.style.alignItems = "center";
@@ -218,10 +219,31 @@ function toggleWorksheets(sw){
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
  navigationMenu.style.display = "";
+ fnBrowserDetect();
+ if (browserName === "chrome") {
     for (var j = 0; j < worksheetsList.length; j++){
-    console.log(worksheetsList[j]);
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
+ }
   toggleWorksheets(0);
+}
+
+function fnBrowserDetect(){
+                 
+         let userAgent = navigator.userAgent;
+         
+         if(userAgent.match(/chrome|chromium|crios/i)){
+             browserName = "chrome";
+           }else if(userAgent.match(/firefox|fxios/i)){
+             browserName = "firefox";
+           }  else if(userAgent.match(/safari/i)){
+             browserName = "safari";
+           }else if(userAgent.match(/opr\//i)){
+             browserName = "opera";
+           } else if(userAgent.match(/edg/i)){
+             browserName = "edge";
+           }else{
+             browserName="No browser detection";
+           }    
 }
