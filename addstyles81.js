@@ -215,9 +215,6 @@ function toggleWorksheets(sw){
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
  
- //Fixing Firefox bug
- menuList[0].click();
- 
  navigationMenu.style.display = "";
   for (var j = 0; j < worksheetsList.length; j++){
     console.log(worksheetsList[j]);
@@ -225,4 +222,6 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   toggleWorksheets(0);
+ //Fixing Firefox bug
+ menuList[0].click();
 }
