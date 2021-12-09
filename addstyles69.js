@@ -176,7 +176,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw < 3) {
-      if (i != sw && i != sw < 3) {
+      if (i != sw && i >= 3) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
@@ -184,7 +184,7 @@ function toggleWorksheets(sw){
       }
     }
     else if (sw > menuList.length-4) {
-       if (i < sw) {
+       if (i < menuList.length-3) {
         menuList[i].style.maxWidth = '0px';
       }
       else {
