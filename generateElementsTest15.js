@@ -177,6 +177,10 @@ var classes = `
   transition: all .3s;
 }
 
+#P-Container {
+	overflow: hidden;
+}
+
 #P-LoadingDiv {
 	margin: 0;
 	padding: 0;
