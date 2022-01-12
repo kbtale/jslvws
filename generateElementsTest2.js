@@ -307,6 +307,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
+    setTimeout(() => {loadingDiv.classList.add("leave");}, 1000);
     }
  } else if (browserName === "firefox"){
   try {
