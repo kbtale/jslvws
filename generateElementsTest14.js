@@ -13,6 +13,7 @@ navigationMenuContainer.style.justifyContent = "center";
 navigationMenuContainer.style.marginTop = navigationMenuContainer.style.marginBottom = "10px";
 
 navigationMenuContainer.style.display = "none";
+container.style.height = "0px";
 
 for (var i = 0; i < worksheetsList.length; i++) { 
   menuEl = document.createElement("a");
@@ -348,6 +349,7 @@ function showAll(){
 		console.log("last div loaded");
 		loadingDiv.style.display="none";
 		navigationMenuContainer.style.display = "flex";
+		container.style.height = "";
 		navigationMenuContainer.classList.add("join");
 		container.classList.add("join");
 	    	navigationMenuContainer.style.opacity="1";
