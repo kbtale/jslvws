@@ -183,12 +183,18 @@ var classes = `
 
 #P-LoadingDiv {
 	margin: 0;
-	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	max-width: 100%;
 	overflow: hidden;
+}
+
+#P-LoadingDiv img {
+	height: 60vh;
+	box-shadow: black 3px 3px 3px;
 }
 
 .leave {
