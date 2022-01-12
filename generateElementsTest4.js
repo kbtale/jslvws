@@ -179,8 +179,8 @@ var classes = `
 }
 
 .leave {
-	-webkit-animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
-	        animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	-webkit-animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	        animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 }
 
 @keyframes leave {
@@ -307,8 +307,8 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
-    setTimeout(() => {loadingDiv.classList.add("leave");}, 1000);
     }
+    setTimeout(() => {loadingDiv.classList.add("leave");}, 1000);
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
