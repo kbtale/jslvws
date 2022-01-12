@@ -203,8 +203,8 @@ var classes = `
 }
 
 .leave {
-	-webkit-animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
-	        animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	-webkit-animation: leave .9s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	        animation: leave .9s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 }
 
 .join {
@@ -368,7 +368,7 @@ function showAll(){
 		container.classList.add("join");
 	    	navigationMenuContainer.style.opacity="1";
     		container.style.opacity="1";
-	    },1200);
+	    },900);
     }, 1500);
  } else if (browserName === "firefox"){
   try {
@@ -390,7 +390,7 @@ function showAll(){
 		container.classList.add("join");
 	    navigationMenuContainer.style.opacity="1";
     	container.style.opacity="1";
-	    },1200);
+	    },900);
     }, 1500);
   } catch {
     setTimeout(() => {menuList[0].click();
@@ -407,7 +407,7 @@ function showAll(){
 		container.classList.add("join");
 	    navigationMenuContainer.style.opacity="1";
     	container.style.opacity="1";
-	    },1200);
+	    },900);
     }, 1500);},
 	1500);
   }
