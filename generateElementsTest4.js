@@ -175,6 +175,11 @@ var classes = `
 }
 
 #P-LoadingDiv {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	max-width: 100%
 	overflow: hidden;
 }
 
