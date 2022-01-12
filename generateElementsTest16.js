@@ -193,7 +193,8 @@ var classes = `
 }
 
 #P-LoadingDiv img {
-	height: 60vh;
+	height: 85vh;
+	width: auto;
 	box-shadow: black 3px 3px 3px;
 }
 
