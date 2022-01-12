@@ -347,7 +347,8 @@ function showAll(){
 	    setTimeout(() => {
 		console.log("last div loaded");
 		loadingDiv.style.display="none";
-		container.style.display = navigationMenuContainer.style.display = "flex";
+		navigationMenuContainer.style.display = "flex";
+		container.style.display = "block";
 		navigationMenuContainer.classList.add("join");
 		container.classList.add("join");
 	    	navigationMenuContainer.style.opacity="1";
