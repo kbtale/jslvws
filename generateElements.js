@@ -1,3 +1,4 @@
+var loadingDiv = document.getElementById("P-LoadingDiv");
 var navigationMenuContainer = document.getElementById("P-Navigation");
 var navigationMenu = document.getElementById("P-Navigation-Menu");
 var container = document.getElementById("P-Container");
@@ -172,6 +173,50 @@ var classes = `
   padding: 0;
   transition: all .3s;
 }
+
+.leave {
+	-webkit-animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	        animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+@keyframes leave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  99% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@-webkit-keyframes leave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  99% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }  
+}
 `;
 
 styles = document.createElement('style');
@@ -266,7 +311,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   } catch {
-    setTimeout(() => {menuList[0].click();}, 1500);
+    setTimeout(() => {menuList[0].click(); loadingDiv.classList.add("leave");}, 1500);
   }
  }
 }
