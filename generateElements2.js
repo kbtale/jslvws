@@ -174,6 +174,10 @@ var classes = `
   transition: all .3s;
 }
 
+#P-LoadingDiv {
+	overflow: hidden;
+}
+
 .leave {
 	-webkit-animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 	        animation: puff-out-center 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
