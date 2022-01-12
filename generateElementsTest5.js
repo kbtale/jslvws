@@ -196,15 +196,12 @@ var classes = `
             filter: blur(0px);
     opacity: 1;
   }
-  99% {
+  100% {
     -webkit-transform: scale(2);
             transform: scale(2);
     -webkit-filter: blur(4px);
             filter: blur(4px);
     opacity: 0;
-  }
-  100% {
-    display: none;
   }
 }
 @-webkit-keyframes leave {
@@ -215,16 +212,13 @@ var classes = `
             filter: blur(0px);
     opacity: 1;
   }
-  99% {
+  100% {
     -webkit-transform: scale(2);
             transform: scale(2);
     -webkit-filter: blur(4px);
             filter: blur(4px);
     opacity: 0;
   }
-  100% {
-    display: none;
-  }  
 }
 `;
 
@@ -313,7 +307,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
-    setTimeout(() => {loadingDiv.classList.add("leave");}, 1000);
+    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none";},1210);}, 1000);
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
