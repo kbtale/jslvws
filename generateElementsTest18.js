@@ -372,9 +372,41 @@ function showAll(){
   for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+	      toggleWorksheets(0);
   }
+  navigationMenuContainer.style.opacity="0";
+    container.style.opacity="0";
+    setTimeout(() => {
+	    loadingDiv.classList.add("leave");
+	    setTimeout(() => {
+		console.log("last div loaded");
+		loadingDiv.style.display="none";
+		navigationMenuContainer.style.display = "flex";
+		container.style.height = "";
+		navigationMenuContainer.classList.add("join");
+		container.classList.add("join");
+	    navigationMenuContainer.style.opacity="1";
+    	container.style.opacity="1";
+	    },1200);
+    }, 1500);
   } catch {
-    setTimeout(() => {menuList[0].click(); loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none"; navigationMenuContainer.classList.add("join"); container.classList.add("join");},1205)}, 1500);
+    setTimeout(() => {menuList[0].click();
+	navigationMenuContainer.style.opacity="0";
+    container.style.opacity="0";
+    setTimeout(() => {
+	    loadingDiv.classList.add("leave");
+	    setTimeout(() => {
+		console.log("last div loaded");
+		loadingDiv.style.display="none";
+		navigationMenuContainer.style.display = "flex";
+		container.style.height = "";
+		navigationMenuContainer.classList.add("join");
+		container.classList.add("join");
+	    navigationMenuContainer.style.opacity="1";
+    	container.style.opacity="1";
+	    },1200);
+    }, 1500);},
+	1500);
   }
  }
 }
