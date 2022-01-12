@@ -291,7 +291,8 @@ var classes = `
 	    margin: 0 !important;
 	    padding: 0 !important;
             z-index: 1;
-	    box-shadow: 2px 2px 2px #444;
+	    max-width: auto !important;
+	    max-height: auto !important;
         }
         .water{
             width: clamp(10.5vh, 250px, 18vh);
