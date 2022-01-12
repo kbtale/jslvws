@@ -197,7 +197,7 @@ var classes = `
 }
 
 #P-LoadingDiv img {
-	height: 85vh;
+	height: 90vh;
 	width: auto;
 	box-shadow: black 3px 3px 3px;
 }
@@ -208,8 +208,8 @@ var classes = `
 }
 
 .join {
-	-webkit-animation: slide-in-bck-center 0.7s ease-out both forwards;
-	        animation: slide-in-bck-center 0.7s ease-out both forwards;
+	-webkit-animation: slide-in-bck-center 0.7s ease-out forwards;
+	        animation: slide-in-bck-center 0.7s ease-out forwards;
 }
 
 @keyframes leave {
@@ -361,7 +361,6 @@ function showAll(){
     setTimeout(() => {
 	    loadingDiv.classList.add("leave");
 	    setTimeout(() => {
-		console.log("last div loaded");
 		loadingDiv.style.display="none";
 		navigationMenuContainer.style.display = "flex";
 		container.style.height = "";
