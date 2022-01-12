@@ -190,6 +190,7 @@ var classes = `
 	width: 100%;
 	max-width: 100%;
 	overflow: hidden;
+	position: relative;
 }
 
 .no-overflow {
@@ -269,32 +270,37 @@ var classes = `
     opacity: 1;
   }
 }
-        .loadingContainer {
-            width: clamp(15vw, 350px, 20vw);
-            height: clamp(15vw, 350px, 20vw);
+	.loadingContainer {
+		position: absolute;
+		bottom: 24vh;
+		transform: translateX(10vh);
+	}
+        .loadingCircle {
+            width: clamp(10.5vw, 250px, 15vw);
+            height: clamp(10.5vw, 250px, 15vw);
             position: relative;
             box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
             border-radius: 50%;
             background-color: skyblue;
-            overflow: hidden
+            overflow: hidden;
         }
         .loadingContainer .logo {
-            width: clamp(15vw, 350px, 20vw);
-            height: clamp(15vw, 350px, 20vw);
+            width: clamp(10.5vw, 250px, 15vw);
+            height: clamp(10.5vw, 250px, 15vw);
             position: absolute;
             z-index: 1;
         }
         .water{
-            width: clamp(15vw, 350px, 20vw);
-            height: clamp(15vw, 350px, 20vw);
+            width: clamp(10.5vw, 250px, 15vw);
+            height: clamp(10.5vw, 250px, 15vw);
             position: relative;
             animation: gravity 5s ease-in-out alternate infinite;
         }
         .water:before, .water:after{
             content:'';
             position: absolute;
-            width: clamp(15vw, 350px, 20vw);
-            height: clamp(15vw, 350px, 20vw);
+            width: clamp(12vw, 300px, 15vw);
+            height: clamp(12vw, 300px, 15vw);
             top:clamp(-8vw, -100px, -12vw);
             background-color: #fff;
         }
