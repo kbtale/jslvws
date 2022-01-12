@@ -272,7 +272,7 @@ var classes = `
 }
 	.loadingContainer {
 		position: absolute;
-		bottom: 24vh;
+		bottom: 23vh;
 		transform: translateX(10vh);
 	}
         .loadingCircle {
@@ -358,13 +358,13 @@ var classes = `
     display:flex;
     justify-content: center;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: .4rem;
     color: white;
     font-size: 2rem;
     font-family: Helvetica, sans-serif, Arial;
     animation: load 1.5s infinite 0s ease-in-out;
     animation-direction: alternate;
-    text-shadow: 0 0 1px white;
+    text-shadow: 0 0 1px white, 0 0 6px black;
 }
 `;
 
