@@ -12,6 +12,8 @@ navigationMenuContainer.style.alignItems = "center";
 navigationMenuContainer.style.justifyContent = "center";
 navigationMenuContainer.style.marginTop = navigationMenuContainer.style.marginBottom = "10px";
 
+container.style.display = navigationMenuContainer.style.display = "none";
+
 for (var i = 0; i < worksheetsList.length; i++) { 
   menuEl = document.createElement("a");
   menuEl.value = i;
@@ -338,11 +340,14 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
+    navigationMenuContainer.style.opacity="0";
+    container.style.opacity="0";
     setTimeout(() => {
 	    loadingDiv.classList.add("leave");
 	    setTimeout(() => {
 		    console.log("last div loaded");
 		    loadingDiv.style.display="none";
+			container.style.display = navigationMenuContainer.style.display = "block";
 		    navigationMenuContainer.classList.add("join");
 		    container.classList.add("join");
 	    },1200);
