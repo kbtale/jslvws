@@ -285,9 +285,11 @@ var classes = `
             overflow: hidden;
         }
         .loadingContainer .logo {
-            width: clamp(10.5vh, 250px, 18vh);
-            height: clamp(10.5vh, 250px, 18vh);
-            position: absolute;
+            width: clamp(10.5vh, 250px, 18vh) !important;
+            height: clamp(10.5vh, 250px, 18vh) !important;
+            position: absolute !important;
+	    margin: 0 !important;
+	    padding: 0 !important;
             z-index: 1;
 	    box-shadow: 2px 2px 2px #444;
         }
