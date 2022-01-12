@@ -192,6 +192,10 @@ var classes = `
 	overflow: hidden;
 }
 
+.no-overflow {
+	overflow: hidden;
+}
+
 #P-LoadingDiv img {
 	height: 85vh;
 	width: auto;
