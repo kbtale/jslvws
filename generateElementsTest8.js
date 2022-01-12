@@ -338,7 +338,15 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
-    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none"; navigationMenuContainer.classList.add("join"); container.classList.add("join");},1205);}, 1500);
+    setTimeout(() => {
+	    loadingDiv.classList.add("leave");
+	    setTimeout(() => {
+		    console.log("last div loaded");
+		    loadingDiv.style.display="none";
+		    navigationMenuContainer.classList.add("join");
+		    container.classList.add("join");
+	    },1200);
+    }, 1500);
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
