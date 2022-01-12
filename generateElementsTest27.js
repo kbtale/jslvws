@@ -197,7 +197,7 @@ var classes = `
 	overflow: hidden;
 }
 
-#P-LoadingDiv img {
+#P-LoadingDiv .cover {
 	height: 90vh;
 	width: auto;
 	box-shadow: black 3px 3px 3px;
