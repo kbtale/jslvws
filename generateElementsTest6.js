@@ -181,6 +181,7 @@ var classes = `
 	width: 100%;
 	max-width: 100%
 	overflow: hidden;
+	z-index: 3;
 }
 
 .leave {
@@ -307,7 +308,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
-    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none";},1210);}, 1000);
+    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none";},1220);}, 1500);
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
