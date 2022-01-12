@@ -177,16 +177,21 @@ var classes = `
 #P-LoadingDiv {
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	display: flex;
+	justify-content: center;
 	width: 100%;
-	max-width: 100%
+	max-width: 100%;
 	overflow: hidden;
-	z-index: 3;
 }
 
 .leave {
 	-webkit-animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 	        animation: leave 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+.join {
+	-webkit-animation: slide-in-bck-center 0.7s ease-out both forwards;
+	        animation: slide-in-bck-center 0.7s ease-out both forwards;
 }
 
 @keyframes leave {
@@ -219,6 +224,31 @@ var classes = `
     -webkit-filter: blur(4px);
             filter: blur(4px);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
   }
 }
 `;
@@ -308,7 +338,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
-    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none";},1220);}, 1500);
+    setTimeout(() => {loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none"; navigationMenuContainer.classList.add("join"); container.classList.add("join");},1205);}, 1500);
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
@@ -316,7 +346,7 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
   }
   } catch {
-    setTimeout(() => {menuList[0].click(); loadingDiv.classList.add("leave");}, 1500);
+    setTimeout(() => {menuList[0].click(); loadingDiv.classList.add("leave"); setTimeout(() => {loadingDiv.style.display="none"; navigationMenuContainer.classList.add("join"); container.classList.add("join");},1205)}, 1500);
   }
  }
 }
