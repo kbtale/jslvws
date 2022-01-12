@@ -276,8 +276,8 @@ var classes = `
 		transform: translateX(10vh);
 	}
         .loadingCircle {
-            width: clamp(10.5vw, 250px, 15vw);
-            height: clamp(10.5vw, 250px, 15vw);
+            width: clamp(10.5vh, 250px, 18vh);
+            height: clamp(10.5vh, 250px, 18vh);
             position: relative;
             box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
             border-radius: 50%;
@@ -285,22 +285,23 @@ var classes = `
             overflow: hidden;
         }
         .loadingContainer .logo {
-            width: clamp(10.5vw, 250px, 15vw);
-            height: clamp(10.5vw, 250px, 15vw);
+            width: clamp(10.5vh, 250px, 18vh);
+            height: clamp(10.5vh, 250px, 18vh);
             position: absolute;
             z-index: 1;
+	    box-shadow: 2px 2px 2px #444;
         }
         .water{
-            width: clamp(10.5vw, 250px, 15vw);
-            height: clamp(10.5vw, 250px, 15vw);
+            width: clamp(10.5vh, 250px, 18vh);
+            height: clamp(10.5vh, 250px, 18vh);
             position: relative;
             animation: gravity 5s ease-in-out alternate infinite;
         }
         .water:before, .water:after{
             content:'';
             position: absolute;
-            width: clamp(12vw, 300px, 15vw);
-            height: clamp(12vw, 300px, 15vw);
+            width: clamp(12vh, 250px, 21vh);
+            height: clamp(12vh, 250px, 21vh);
             top:clamp(-8vw, -100px, -12vw);
             background-color: #fff;
         }
