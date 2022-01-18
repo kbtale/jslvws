@@ -305,7 +305,7 @@ var classes = `
             position: absolute;
             width: clamp(12vh, 250px, 21vh);
             height: clamp(12vh, 250px, 21vh);
-            top:clamp(-5vh, -100px, -8vh);
+            top:clamp(-4vh, -100px, -6vh);
             background-color: #fff;
         }
         .water:before{
