@@ -454,8 +454,10 @@ function showAll(){
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
 	show();
    function show(){
-	if (worksheetsList[0]) { 
+	if (worksheetsList[0]) {
+			console.log(JSON.stringify(worksheetsList[0]));
     for (var j = 0; j < worksheetsList.length; j++){
+	console.log(JSON.stringify(worksheetsList[j]));
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
