@@ -477,7 +477,7 @@ function showAll(){
 	}
 	   else {
 		console.log("Retrying connection...");
-		setTimeout(show(),1000);
+		setTimeout(show,1500);
 	   }
    }
  } else if (browserName === "firefox"){
