@@ -452,6 +452,9 @@ function showAll(){
  navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
+	show();
+   function show(){
+	if (worksheetsList[0]) { 
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
@@ -471,6 +474,12 @@ function showAll(){
     		container.style.opacity="1";
 	    },900);
     }, 1500);
+	}
+	   else {
+		console.log("Retrying connection...");
+		setTimeout(show(),1000);
+	   }
+   }
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
