@@ -454,11 +454,13 @@ function showAll(){
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
     for (var j = 0; j < worksheetsList.length; j++){
-	if (worksheetsList[j].getElementsByTagName("div")[0] != undefined){    
+	if (worksheetsList[j].getElementsByTagName("div")[0] != undefined){
+	console.log("I exist.");
     	worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     	worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
 	}
 	else {
+		console.log("I'm here.")
 		worksheetsList[j].remove();
 	}
     }
