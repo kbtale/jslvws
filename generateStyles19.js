@@ -448,14 +448,14 @@ function toggleWorksheets(sw){
 }
 
 function showAll(){
- var worksheetsList = document.getElementsByClassName("liveworksheet");
+ var worksheetsList = container.getElementsByClassName("liveworksheet");
  navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
 	show();
    function show(){
 	console.log(worksheetsList[0].innerHTML);
-	worksheetsList2 = document.getElementsByClassName("liveworksheet");
+	worksheetsList2 = container.getElementsByClassName("liveworksheet");
 	try {
     for (var j = 0; j < worksheetsList2.length; j++){
     worksheetsList2[j].getElementsByTagName("div")[0].style.height = "";
