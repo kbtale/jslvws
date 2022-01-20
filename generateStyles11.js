@@ -488,8 +488,8 @@ function showAll(){
 		worksheetsList[j].remove();
 	}
   }
-	toggleWorksheets(0);
 	createMenu();
+	toggleWorksheets(0);
   	navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
     setTimeout(() => {
