@@ -458,7 +458,7 @@ function showAll(){
 	worksheetsList2 = document.getElementsByClassName("liveworksheet");
 	console.log(worksheetsList2[0].innerHTML);
 	console.log(worksheetsList2);
-	if (worksheetsList2.length > 10) {
+	if (worksheetsList2[0].length > 1) {
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
