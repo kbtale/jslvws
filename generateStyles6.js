@@ -480,11 +480,16 @@ function showAll(){
  } else if (browserName === "firefox"){
   try {
   for (var j = 0; j < worksheetsList.length; j++){
+	if (worksheetsList[j].getElementsByTagName("div")[0] != undefined){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
-	toggleWorksheets(0);
+	} else {
+		worksheetsList[j].remove();
+		menuList[menuList.length-1].remove();
+	}
   }
-  navigationMenuContainer.style.opacity="0";
+	toggleWorksheets(0);	  
+  	navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
     setTimeout(() => {
 	    loadingDiv.classList.add("leave");
