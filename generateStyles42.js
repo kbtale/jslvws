@@ -23,7 +23,6 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.classList.add("menuItem");
   menuEl.classList.add("menuNumber");
   menuEl.addEventListener("click", changeWorksheet);
-  navigationMenu.style.display = "none";
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
   if (i === 0){
@@ -422,7 +421,6 @@ function toggleWorksheets(sw){
 }
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
- navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
     for (var j = 0; j < worksheetsList.length; j++){
