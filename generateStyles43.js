@@ -456,9 +456,9 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
 	} else {
 		worksheetsList[j].remove();
-		menuList[menuList.length-1].remove();
 	}
   }
+	createMenu();
 	toggleWorksheets(0);	  
   	navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
