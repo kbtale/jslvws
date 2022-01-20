@@ -456,6 +456,7 @@ function showAll(){
    function show(){
 	worksheetsList = document.getElementsByClassName("liveworksheet");
 	console.log(JSON.stringify(worksheetsList));
+	console.log(document.getElementsByClassName("liveworksheet"));
 	if (worksheetsList[0].length > 1) {
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
