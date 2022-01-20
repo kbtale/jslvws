@@ -454,7 +454,8 @@ function showAll(){
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
 	show();
    function show(){
-	var worksheetsList = document.getElementsByClassName("liveworksheet");
+	worksheetsList = document.getElementsByClassName("liveworksheet");
+	console.log(JSON.parse(worksheetsList));
 	if (worksheetsList[0].length > 1) {
     for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
