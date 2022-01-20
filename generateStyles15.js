@@ -454,9 +454,9 @@ function showAll(){
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
 	show();
    function show(){
-	console.log(document.getElementsByClassName("liveworksheet"));
+	console.log(worksheetsList[0].innerHTML);
 	worksheetsList2 = document.getElementsByClassName("liveworksheet");
-	console.log(JSON.stringify(worksheetsList2));
+	console.log(worksheetsList2[0].innerHTML);
 	console.log(worksheetsList2);
 	if (worksheetsList2[0].innerHTML.length > 1) {
     for (var j = 0; j < worksheetsList.length; j++){
