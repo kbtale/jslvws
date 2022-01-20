@@ -5,6 +5,7 @@ var container = document.getElementById("P-Container");
 var worksheetsList = document.getElementsByClassName("liveworksheet");
 var selectedWorksheet = 0;
 var menuList = [];
+var dotContainer1, dotContainer2, dotContainer3, dotContainer4; 
 var browserName;
 
 function createMenu(){
@@ -28,7 +29,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
   if (i === 0){
-    var dotContainer1 = document.createElement("a");
+    dotContainer1 = document.createElement("a");
     dotContainer1.classList.add("dotContainer");
     var dot1 = document.createElement("span");
     dot1.classList.add("dot");
@@ -37,7 +38,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer1);
   }
   if (i === worksheetsList.length-2){
-    var dotContainer2 = document.createElement("a");
+    dotContainer2 = document.createElement("a");
     dotContainer2.classList.add("dotContainer");
     var dot2 = document.createElement("span");
     dot2.classList.add("dot");
@@ -46,7 +47,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer2);
   }
    if (i === 1){
-    var dotContainer3 = document.createElement("a");
+    dotContainer3 = document.createElement("a");
     dotContainer3.classList.add("dotContainer");
     var dot3 = document.createElement("span");
     dot3.classList.add("dot");
@@ -55,7 +56,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer3);
   }
    if (i === worksheetsList.length-3){
-    var dotContainer4 = document.createElement("a");
+    dotContainer4 = document.createElement("a");
     dotContainer4.classList.add("dotContainer");
     var dot4 = document.createElement("span");
     dot4.classList.add("dot");
