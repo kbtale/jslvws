@@ -13,9 +13,8 @@ navigationMenuContainer.style.display = "flex";
 navigationMenuContainer.style.alignItems = "center";
 navigationMenuContainer.style.justifyContent = "center";
 navigationMenuContainer.style.marginTop = navigationMenuContainer.style.marginBottom = "10px";
-
+navigationMenuContainer.style.display = "none";
 container.style.height = "0px";
-
 for (var i = 0; i < worksheetsList.length; i++) { 
   menuEl = document.createElement("a");
   menuEl.value = i;
@@ -28,6 +27,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
   if (i === 0){
+    var dotContainer1 = document.createElement("a");
     dotContainer1 = document.createElement("a");
     dotContainer1.classList.add("dotContainer");
     var dot1 = document.createElement("span");
@@ -37,6 +37,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer1);
   }
   if (i === worksheetsList.length-2){
+    var dotContainer2 = document.createElement("a");
     dotContainer2 = document.createElement("a");
     dotContainer2.classList.add("dotContainer");
     var dot2 = document.createElement("span");
@@ -46,6 +47,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer2);
   }
    if (i === 1){
+    var dotContainer3 = document.createElement("a");
     dotContainer3 = document.createElement("a");
     dotContainer3.classList.add("dotContainer");
     var dot3 = document.createElement("span");
@@ -55,6 +57,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer3);
   }
    if (i === worksheetsList.length-3){
+    var dotContainer4 = document.createElement("a");
     dotContainer4 = document.createElement("a");
     dotContainer4.classList.add("dotContainer");
     var dot4 = document.createElement("span");
@@ -64,7 +67,6 @@ for (var i = 0; i < worksheetsList.length; i++) {
     navigationMenu.insertAdjacentElement("beforeend", dotContainer4);
   }
 }
-
 var leftArrow = document.createElement("a");
 var rightArrow = document.createElement("a");
 var la = document.createElement("a");
@@ -80,11 +82,9 @@ rightArrow.classList.add("menuArrow-r");
 leftArrow.value = rightArrow.value = -1;
 leftArrow.addEventListener("click", function(ev){if (selectedWorksheet > 0) {selectedWorksheet -= 1; changeWorksheet(ev);}});
 rightArrow.addEventListener("click", function(ev){if (selectedWorksheet < worksheetsList.length-1) {selectedWorksheet += 1; changeWorksheet(ev);}});
-
 navigationMenu.insertAdjacentElement("afterbegin", leftArrow);
 navigationMenu.insertAdjacentElement("beforeend", rightArrow);
 }
-
 var classes = `
 #P-Navigation-Menu {
   display: inline-flex;
@@ -96,12 +96,10 @@ var classes = `
   transition: all .3s;
   max-width: 90vw;
 }
-
 #P-Navigation-Menu:hover {
   -webkit-box-shadow: 0px 6px 8px -4px #101010, 5px 5px 6px -2px rgba(10,10,20,0); 
   box-shadow: 0px 6px 8px -4px #101010, 5px 5px 6px -2px rgba(10,10,20,0);
 }
-
 #P-Navigation-Menu .menuItem {
   cursor: pointer;
   user-select: none;
@@ -114,19 +112,16 @@ var classes = `
   align-items: center;
   overflow: hidden;
 }
-
 #P-Navigation-Menu .menuNumber {
   width: 3.5em;
   heigth: 3.5em;
   justify-content: center;
   transition: all .3s;
 }
-
 #P-Navigation-Menu .menuNumber.active {
   background-color: #1944bd;
   transition: all .3s;
 }
-
 #P-Navigation-Menu .menuArrow-l, #P-Navigation-Menu .menuArrow-r {
   width: 3.5em;
   heigth: 3.5em;
@@ -135,16 +130,13 @@ var classes = `
   margin-left: .9em;
   transition: all .3s;
 }
-
 #P-Navigation-Menu .menuArrow-l {
   justify-content: flex-end;
 }
-
 #P-Navigation-Menu .menuArrow-l a {
   margin-right: .9em;
   transition: all .3s;
 }
-
 #P-Navigation-Menu .menuNumber:hover:not(.active), #P-Navigation-Menu .menuArrow-l:hover, #P-Navigation-Menu .menuArrow-r:hover {
   background-color: #2d59d6;
 }
@@ -154,7 +146,6 @@ var classes = `
 #P-Navigation-Menu .menuArrow-l:hover a {
   transform: translateX(-60%) scale(1.1);
 }
-
 #P-Navigation-Menu .dotContainer {
   display: flex;
   justify-content: center;
@@ -164,7 +155,6 @@ var classes = `
   height: 3.5em;
   transition: all .3s;
 }
-
 #P-Navigation-Menu .dot {
   height: .8em;
   width: .8em;
@@ -172,17 +162,14 @@ var classes = `
   border-radius: 50%;
   display: inline-block;
 }
-
 #P-Navigation-Menu .dotContainer.disabled {
   width: 0em;
   padding: 0;
   transition: all .3s;
 }
-
 #P-Container {
 	overflow: hidden;
 }
-
 #P-LoadingDiv {
 	margin: 0;
 	padding-top: 15px;
@@ -194,27 +181,22 @@ var classes = `
 	overflow: hidden;
 	position: relative;
 }
-
 .no-overflow {
 	overflow: hidden;
 }
-
 #P-LoadingDiv .cover {
 	height: 90vh;
 	width: auto;
 	box-shadow: black 3px 3px 3px;
 }
-
 .leave {
 	-webkit-animation: leave .9s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 	        animation: leave .9s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 }
-
 .join {
 	-webkit-animation: slide-in-bck-center 0.7s ease-out forwards;
 	        animation: slide-in-bck-center 0.7s ease-out forwards;
 }
-
 @keyframes leave {
   0% {
     -webkit-transform: scale(1);
@@ -247,7 +229,6 @@ var classes = `
     opacity: 0;
   }
 }
-
 @-webkit-keyframes slide-in-bck-center {
   0% {
     -webkit-transform: translateZ(600px);
@@ -320,7 +301,6 @@ var classes = `
             background:rgba(255,255,255,.3);
             animation:wave 6.5s linear infinite;
         }
-
         @keyframes gravity {
           0% {
             transform: translateY(0);
@@ -332,7 +312,6 @@ var classes = `
             transform: translateY(-1.2rem);
           }
         }
-
         @keyframes wave{
             0%{
                 transform: rotate(0);
@@ -359,7 +338,6 @@ var classes = `
 /*              filter: blur(0); */
         }
 }
-
 .animateLoading {
     display:flex;
     justify-content: center;
@@ -373,29 +351,23 @@ var classes = `
     text-shadow: 0 0 1px white, 0 0 6px black;
 }
 `;
-
 styles = document.createElement('style');
 styles.type = 'text/css';
 container.insertAdjacentElement("afterend", styles);
-
 if (styles.styleSheet)
   styles.styleSheet.cssText = classes;
 else {
     styles.appendChild(document.createTextNode(classes));
 }
-
 window.addEventListener("load", function() {
  setTimeout(showAll(), 500);
-
 });
-
 function changeWorksheet(ev){
   if (ev.currentTarget.value != -1)
     selectedWorksheet = ev.currentTarget.value;
   
   toggleWorksheets(selectedWorksheet);
 }
-
 function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) {
     (i != sw) ? worksheetsList[i].style.display = 'none' : worksheetsList[i].style.display = 'block';
@@ -448,19 +420,17 @@ function toggleWorksheets(sw){
     }
   }
 }
-
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
+ navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
     for (var j = 0; j < worksheetsList.length; j++){
-	if (worksheetsList[j].getElementsByTagName("div")[0] != undefined){
-	console.log("I exist.");
+	if (worksheetsList[j].getElementsByTagName("div")[0] != undefined){    
     	worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     	worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
 	}
 	else {
-		console.log("I'm here.")
 		worksheetsList[j].remove();
 	}
     }
@@ -488,10 +458,10 @@ function showAll(){
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
 	} else {
 		worksheetsList[j].remove();
+		menuList[menuList.length-1].remove();
 	}
   }
-	createMenu();
-	toggleWorksheets(0);
+	toggleWorksheets(0);	  
   	navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
     setTimeout(() => {
@@ -528,7 +498,6 @@ function showAll(){
   }
  }
 }
-
 function fnBrowserDetect(){
                  
          let userAgent = navigator.userAgent;
