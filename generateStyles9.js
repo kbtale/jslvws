@@ -14,7 +14,6 @@ navigationMenuContainer.style.alignItems = "center";
 navigationMenuContainer.style.justifyContent = "center";
 navigationMenuContainer.style.marginTop = navigationMenuContainer.style.marginBottom = "10px";
 
-navigationMenuContainer.style.display = "none";
 container.style.height = "0px";
 
 for (var i = 0; i < worksheetsList.length; i++) { 
@@ -452,7 +451,6 @@ function toggleWorksheets(sw){
 
 function showAll(){
  var worksheetsList = document.getElementsByClassName("liveworksheet");
- navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
     for (var j = 0; j < worksheetsList.length; j++){
