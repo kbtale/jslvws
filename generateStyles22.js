@@ -457,9 +457,9 @@ function showAll(){
 	console.log(worksheetsList[0].innerHTML);
 	worksheetsList2 = container.getElementsByClassName("liveworksheet");
 	try {
-    for (var j = 0; j < worksheetsList2.length; j++){
-    worksheetsList2[j].getElementsByTagName("div")[0].style.height = "";
-    worksheetsList2[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+    for (var j = 0; j < worksheetsList.length; j++){
+    worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
+    worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
     navigationMenuContainer.style.opacity="0";
