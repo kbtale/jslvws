@@ -7,6 +7,7 @@ var selectedWorksheet = 0;
 var menuList = [];
 var browserName;
 
+function createMenu(){
 navigationMenuContainer.style.display = "flex";
 navigationMenuContainer.style.alignItems = "center";
 navigationMenuContainer.style.justifyContent = "center";
@@ -76,12 +77,13 @@ leftArrow.classList.add("menuItem");
 leftArrow.classList.add("menuArrow-l");
 rightArrow.classList.add("menuItem");
 rightArrow.classList.add("menuArrow-r");
-  leftArrow.value = rightArrow.value = -1;
-  leftArrow.addEventListener("click", function(ev){if (selectedWorksheet > 0) {selectedWorksheet -= 1; changeWorksheet(ev);}});
-  rightArrow.addEventListener("click", function(ev){if (selectedWorksheet < worksheetsList.length-1) {selectedWorksheet += 1; changeWorksheet(ev);}});
+leftArrow.value = rightArrow.value = -1;
+leftArrow.addEventListener("click", function(ev){if (selectedWorksheet > 0) {selectedWorksheet -= 1; changeWorksheet(ev);}});
+rightArrow.addEventListener("click", function(ev){if (selectedWorksheet < worksheetsList.length-1) {selectedWorksheet += 1; changeWorksheet(ev);}});
 
 navigationMenu.insertAdjacentElement("afterbegin", leftArrow);
 navigationMenu.insertAdjacentElement("beforeend", rightArrow);
+}
 
 var classes = `
 #P-Navigation-Menu {
@@ -459,9 +461,9 @@ function showAll(){
 	}
 	else {
 		worksheetsList[j].remove();
-		menuList[menuList.length-1].remove();
 	}
     }
+	createMenu();
 	toggleWorksheets(0);
     navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
