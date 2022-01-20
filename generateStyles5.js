@@ -459,7 +459,7 @@ function showAll(){
 	}
 	else {
 		worksheetsList[j].remove();
-		menuList[menuList.length-1].remove;
+		menuList[menuList.length-1].remove();
 	}
     }
 	toggleWorksheets(0);
