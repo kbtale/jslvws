@@ -456,12 +456,10 @@ function showAll(){
    function show(){
 	console.log(worksheetsList[0].innerHTML);
 	worksheetsList2 = document.getElementsByClassName("liveworksheet");
-	console.log(worksheetsList2[0].innerHTML);
-	console.log(worksheetsList2);
 	try {
-    for (var j = 0; j < worksheetsList.length; j++){
-    worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
-    worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
+    for (var j = 0; j < worksheetsList2.length; j++){
+    worksheetsList2[j].getElementsByTagName("div")[0].style.height = "";
+    worksheetsList2[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
     toggleWorksheets(0);
     }
     navigationMenuContainer.style.opacity="0";
