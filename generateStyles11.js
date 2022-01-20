@@ -448,7 +448,7 @@ function toggleWorksheets(sw){
 }
 
 function showAll(){
- var worksheetsList = document.getElementsByClassName("liveworksheet");
+ worksheetsList = document.getElementsByClassName("liveworksheet");
  navigationMenu.style.display = "";
  fnBrowserDetect();
  if (browserName === "chrome" || browserName === "safari" || browserName === "opera" || browserName === "edge") {
