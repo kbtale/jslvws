@@ -459,7 +459,7 @@ function showAll(){
 	}
 	else {
 		worksheetsList[j].remove();
-		menuList.pop();
+		menuList[menuList.length-1].remove;
 	}
     }
 	toggleWorksheets(0);
@@ -482,7 +482,7 @@ function showAll(){
   for (var j = 0; j < worksheetsList.length; j++){
     worksheetsList[j].getElementsByTagName("div")[0].style.height = "";
     worksheetsList[j].getElementsByTagName("div")[0].getElementsByTagName("div")[0].style.height = "";
-	      toggleWorksheets(0);
+	toggleWorksheets(0);
   }
   navigationMenuContainer.style.opacity="0";
     container.style.opacity="0";
