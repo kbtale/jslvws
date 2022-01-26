@@ -25,7 +25,7 @@ for (var i = 0; i < worksheetsList.length; i++) {
   menuEl.addEventListener("click", changeWorksheet);
   navigationMenu.insertAdjacentElement("beforeend", menuEl);
   menuList.push(menuEl);
-if (menuList.length > 7){
+if (menuList.length > 10){
   if (i === 0){
     dotContainer1 = document.createElement("a");
     dotContainer1 = document.createElement("a");
@@ -376,7 +376,7 @@ function toggleWorksheets(sw){
   for (var i = 0; i < worksheetsList.length; i++) {
     (i != sw) ? menuList[i].classList.remove("active") : menuList[i].classList.add("active");
   }
- if (menuList.length > 7) { 
+ if (menuList.length > 10) { 
   if (sw > 2 && sw < menuList.length-3){
       dotContainer1.classList.remove("disabled");
       dotContainer2.classList.remove("disabled");
